@@ -4,6 +4,7 @@
 
 <p align="left">Maya es una aplicación, diseñada para la creación de facturas y gestión de inventarios de pequeños modelos de negocio dedicados a la venta de productos varios.</p>
 
+
 ###
 
 <h2 align="left">✅ Descripción</h2>
@@ -41,11 +42,9 @@
 <p align="left">Fronted: Vite + React (puerto por defecto : http://localhost:5173)</p>
 
 ###
-
-<p align="left">Hello World!!</p>
-
-###
-
-<p align="left">Hello World!!</p>
+<p align="left">Realizado por Juan Guillermo Uribe</p>
 
 ###
+
+
+
