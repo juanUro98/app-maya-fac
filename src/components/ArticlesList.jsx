@@ -6,7 +6,7 @@ const ArticleList = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    let api = "http://localhost:3000/articulo"
+    let api = "https://api-maya-fake-1.onrender.com/articulo"
 
      // Definir las columnas para la tabla
     const columns = [
@@ -15,7 +15,7 @@ const ArticleList = () => {
         { key: 'ValorVentaNeto', title: 'Precio' },
         // Agrega más columnas según tu estructura de datos
     ];
-    
+
     //obtener datos de la api
 
     useEffect(() => {

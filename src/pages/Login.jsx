@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./login.css"
 import { useNavigate } from "react-router-dom";
 import { alertaGeneral, alertaRedireccion, generarToken } from "../helpers/funciones";
-let apiUsers = "http://localhost:3000/users";
+let apiUsers = "https://api-maya-fake-1.onrender.com/users";
 
 function Login() {
     const [getCodUser, setCodUser] = useState("");

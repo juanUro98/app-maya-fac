@@ -12,8 +12,8 @@ function InvoiceComponent() {
     const [quantity, setQuantity] = useState(1);
     const [selectedArticles, setSelectadArticles] = useState([]);
     let userIn = JSON.parse(localStorage.getItem("codigo_usuario"));
-    let apiArticle = "http://localhost:3000/articulo";
-    let apiCostumer = "http://localhost:3000/cliente";
+    let apiArticle = "https://api-maya-fake-1.onrender.com/articulo";
+    let apiCostumer = "https://api-maya-fake-1.onrender.com/cliente";
 
 
     //funcion para buscar articulo y agregarlos a la lista
@@ -144,7 +144,7 @@ function InvoiceComponent() {
 
         };
         try {
-            const response = await fetch("http://localhost:3000/factura", {
+            const response = await fetch("https://api-maya-fake-1.onrender.com/factura", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
