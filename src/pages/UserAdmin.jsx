@@ -6,7 +6,7 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./cuenta.png" alt="" />
+                        <img src="/cuenta.png" alt="" />
                         Gestión Facturas
                     </span>
                 </div>
@@ -21,7 +21,7 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./vendedor.png" alt="" />
+                        <img src="/vendedor.png" alt="" />
                         Gestión usuarios
                     </span>
                 </div>
@@ -34,14 +34,14 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./bolsa-de-la-compra.png" alt="" />
+                        <img src="/bolsa-de-la-compra.png" alt="" />
                         Gestión Articulos
                     </span>
                 </div>
                 <div class="second-content">
                     <span>
                         <nav className="Gestio_record">
-                            <Link className="app_Record_Gestion" to="/articulo">
+                            <Link className="app_Record_Gestion" to="articulo">
                                 Articulos
                             </Link>
                         </nav>
@@ -51,7 +51,7 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./bandeja-de-salida.png" alt="" />
+                        <img src="/bandeja-de-salida.png" alt="" />
                         Gestión salidas
                     </span>
                 </div>
@@ -64,20 +64,22 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./inventario.png" alt="" />
-                        Gestión de inventarios
+                        <img src="/inventario.png" alt="" />
+                        Analisis
                     </span>
                 </div>
                 <div class="second-content">
                     <span>
-                        <button type="button">Ingresar</button>
+                        <Link className="app_Record_Gestion" to="graficas">
+                                Articulos
+                        </Link>
                     </span>
                 </div>
             </div>
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./agregar-usuario.png" alt="" />
+                        <img src="/agregar-usuario.png" alt="" />
                         Gestión Clientes
                     </span>
                 </div>
@@ -90,7 +92,7 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./compras.png" alt="" />
+                        <img src="/compras.png" alt="" />
                         Gestión Departamentos
                     </span>
                 </div>
@@ -104,7 +106,7 @@ function Admin() {
             <div class="card">
                 <div class="first-content">
                     <span>
-                        <img src="./proveedor.png" alt="" />
+                        <img src="/proveedor.png" alt="" />
                         Gestión Proveedores
                     </span>
                 </div>

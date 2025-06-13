@@ -1,29 +1,25 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const ArticleList = () => {
     const [records, setRecords] = useState([]);
     const [filteredRecords, setFilteredRecords] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    let api = "https://api-maya-fake-1.onrender.com/articulo"
+    const api = "https://api-maya-fake-1.onrender.com/articulo";
 
-     // Definir las columnas para la tabla
     const columns = [
-        { key: 'Cod_Articulo', title: 'Código' },
-        { key: 'Nombre', title: 'Nombre' },
-        { key: 'ValorVentaNeto', title: 'Precio' },
-        // Agrega más columnas según tu estructura de datos
+        { key: "Cod_Articulo", title: "Código" },
+        { key: "Nombre", title: "Nombre" },
+        { key: "ValorVentaNeto", title: "Precio" },
     ];
-
-    //obtener datos de la api
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch(api);
                 if (!response.ok) {
-                    throw new Error('Error al obtener los datos');
+                    throw new Error("Error al obtener los datos");
                 }
                 const data = await response.json();
                 setRecords(data);
@@ -34,48 +30,42 @@ const ArticleList = () => {
                 setLoading(false);
             }
         };
-        fetchData(() => {
-        }, [api]);
+        fetchData();
+    }, [api]);
 
-        //Filtarra registros por busqueda
+    useEffect(() => {
+        if (searchTerm.trim() === "") {
+            setFilteredRecords(records);
+        } else {
+            const filtered = records.filter((record) =>
+                Object.values(record).some(
+                    (value) =>
+                        typeof value === "string" &&
+                        value.toLowerCase().includes(searchTerm.toLowerCase())
+                )
+            );
+            setFilteredRecords(filtered);
+        }
+    }, [searchTerm, records]);
 
-        useEffect(() => {
-            if (searchTerm.trim() == '') {
-                setFilteredRecords(records);
-            } else {
-                const filtered = records.filter(record =>
-                    Object.values(record).some(
-                        value =>
-                            typeof value === 'string' && value.toLocaleLowerCase().includes(searchTerm.toLowerCase())
-                    )
-                );
-                setFilteredRecords(filtered)
-            }
-        }, [searchTerm, records]);
-
-        //manejador de errores de carga
-        if (loading) return <div className="loading">Cargando...</div>;
-        if (error) return <div className="error">Error: {error}</div>;
-
-    })
+    if (loading) return <div className="loading">Cargando...</div>;
+    if (error) return <div className="error">Error: {error}</div>;
 
     return (
         <div className="records-container">
-            {/* Barra de búsqueda */}
             <div className="search-bar">
                 <input
                     type="text"
                     placeholder="Buscar por nombre..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="search-input"
+                    className="input"
                 />
                 <span className="search-results">
                     {filteredRecords.length} resultados encontrados
                 </span>
             </div>
 
-            {/* Tabla de registros */}
             <div className="table-container">
                 <table>
                     <thead>
@@ -109,6 +99,9 @@ const ArticleList = () => {
                 </table>
             </div>
         </div>
-    )
-}
+    );
+};
+
 export default ArticleList;
+
+

@@ -19,9 +19,11 @@ thead th{
 .invoicearticle table{  
   border-collapse: separate;
   border-spacing: 25px 0; /* 10px entre columnas, 0 entre filas */
-
-
 }
+.containerFunctions{
+  width: 40%;
+} 
+
 .impuestos{
     width: 580px;
     padding: 5px;
@@ -80,3 +82,36 @@ input:focus,
     .boton-fact{
         align-items:flex-end;
     }
+    .records-container{
+      width: 600px;
+      padding: 20px;
+    }
+
+    .table-container table{
+      border-collapse: separate;
+      border-spacing: 30px 5px;
+      padding: 10px;
+    }
+    .search-bar{
+      display: felx;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .container_graficas{
+      width: 600px;
+      height: 600px;
+      overflow-y: auto;
+    }
+    .tabla{
+      padding: 30px;
+    }
+    .grafica{
+      width: 1000px;
+      padding: 20px;
+    }
+
+    .grafica img{
+      width: 500px;
+      height: auto;
+    }
+

@@ -3,6 +3,8 @@ import Home from "../Home";
 import RutaProtegida from "../components/RutaProtegida";
 import ArticleList from "../components/ArticlesList";
 import InvoiceComponent from "../components/InvoiceConponent";
+import path from "path";
+import Graficas from "../components/AnalisisPy";
 
 
 export let enrutador = [
@@ -17,6 +19,10 @@ export let enrutador = [
             {
                 path: "Factura",
                 element: <InvoiceComponent />
+            },
+            {
+                path: "graficas",
+                element: <Graficas />
             }
         ],
     },

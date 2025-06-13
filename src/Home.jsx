@@ -3,6 +3,7 @@ import InvoiceComponent from "./components/InvoiceConponent";
 import Contenido from "./components/contenido";
 import Header from "./pages/Header"
 import Admin from "./pages/UserAdmin";
+import 'bootstrap/dist/css/bootstrap.min.css'
 let userIn = JSON.parse(localStorage.getItem("codigo_usuario"));
 
 const Home = () => {
